@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medidor Coopera</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Medidor Coopera</h1>
+        <p>
+          Cadastre os aparelhos da casa e descubra o consumo, o valor da conta
+          e quantos painéis solares seriam necessários.
+        </p>
+      </header>
+
+      <section class="card">
+        <h2>Adicionar aparelho</h2>
+        <form id="form-aparelho">
+          <label>
+            Nome
+            <input type="text" id="nome" placeholder="Ex.: Geladeira" required />
+          </label>
+          <label>
+            Potência (W)
+            <input type="number" id="potencia" min="1" max="10000" step="any" placeholder="150" required />
+          </label>
+          <label>
+            Horas por dia
+            <input type="number" id="horas" min="0" max="24" step="any" placeholder="24" required />
+          </label>
+          <label>
+            Dias no mês
+            <input type="number" id="dias" min="1" max="31" step="1" placeholder="30" required />
+          </label>
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Aparelhos cadastrados</h2>
+        <p id="lista-vazia" class="vazio">Nenhum aparelho adicionado ainda.</p>
+        <ul id="lista-aparelhos"></ul>
+
+        <div class="acao">
+          <button id="btn-simular" type="button">Simular</button>
+          <p id="erro" class="erro" role="alert"></p>
+        </div>
+      </section>
+
+      <section id="resultado" aria-live="polite"></section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

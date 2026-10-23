@@ -1,6 +1,6 @@
 module.exports = {
   TARIFA_KWH: 0.890,
-  BANDEIRA: 'vermelha2',
+  BANDEIRA: 'verde',
   HSP: 4.50,
   POTENCIA_PAINEL_W: 400,
   EFICIENCIA: 0.80,
